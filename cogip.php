@@ -1,21 +1,41 @@
 <?php
 require 'sql.php';
-$resultat = $bdd->query('SELECT * FROM Personnes');
-ob_start();
-while ($donnees = $resultat->fetch())
-{
-  echo '<td>'.$donnees['Nom'].'</td>';
-  echo '<td>'.$donnees['Prenom'].'</td>';
-  echo '<td>'.$donnees['Telephone'].'</td>';
-  echo '<td>'.$donnees['Email'].'</td>';
-  echo '<td>'.'<a href="delete.php?id='. $donnees['id'].'">'.'Supprimer</a></td>';
-  echo '<td>'.'<a href="update.php?id='. $donnees['id'].'">'.'Modifier</a></td></tr>';
-}
-$resultat->closeCursor();
-;
+// $resultat = $bdd->query('SELECT * FROM Personnes');
+// ob_start();
+// while ($donnees = $resultat->fetch())
+// {
+//   echo '<td>'.$donnees['Nom'].'</td>';
+//   echo '<td>'.$donnees['Prenom'].'</td>';
+//   echo '<td>'.$donnees['Telephone'].'</td>';
+//   echo '<td>'.$donnees['Email'].'</td>';
+//   echo '<td>'.'<a href="delete.php?id='. $donnees['id'].'">'.'Supprimer</a></td>';
+//   echo '<td>'.'<a href="update.php?id='. $donnees['id'].'">'.'Modifier</a></td></tr>';
+// }
+// $resultat->closeCursor();
+// ;
 
-$out1 = ob_get_contents();
-ob_end_clean();
+// $out1 = ob_get_contents();
+// ob_end_clean();
+
+
+$donnees=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe');
+$donnees->execute();
+$donneesAffich=$donnees->fetchAll();
+
+function out1(){
+  global $donneesAffich;
+  foreach($donneesAffich as $p){
+    echo '<tr><td>'.$p[1].'</td>';
+    echo '<td>'.$p[2].'</td>';
+    echo '<td>'.$p[3].'</td>';
+    echo '<td>'.$p[4].'</td>';
+    echo '<td>'.$p[7].'</td>';
+    echo '<td>'.$p[8].'</td>';
+    echo '<td>'.$p[9].'</td>';
+    echo '<td>'.$p[10].'</td>';
+    echo '<td>'.$p[11].'</td></tr>';
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +94,7 @@ ob_end_clean();
         </thead>
 
         <tbody>
-          <?php echo $out1; ?>
+          <?php echo out1(); ?>
         </tbody>
       </table>
     </div>
