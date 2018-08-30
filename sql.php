@@ -2,7 +2,9 @@
 try
 {
 	// On se connecte à MySQL
-	$bdd = new PDO('mysql:host=localhost;dbname=COGIP;charset=utf8', 'root', 'user');
+	//$bdd = new PDO('mysql:host=localhost;dbname=COGIP;charset=utf8', 'root', 'user');
+	//Connexion via Docker
+	$bdd=new PDO('mysql:host=mysqldb;dbname=COGIP;charset=utf8', 'root', 'root');
 }
 catch(Exception $e)
 {
