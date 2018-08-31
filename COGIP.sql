@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : mysqldb
--- Généré le :  jeu. 30 août 2018 à 12:12
+-- Généré le :  ven. 31 août 2018 à 13:37
 -- Version du serveur :  5.7.22
 -- Version de PHP :  7.2.5
 
@@ -32,18 +32,18 @@ CREATE TABLE `factures` (
   `id` int(10) UNSIGNED NOT NULL,
   `numero` varchar(20) NOT NULL,
   `date` datetime NOT NULL,
-  `objet` varchar(255) NOT NULL
+  `objet` varchar(255) NOT NULL,
+  `fk_id_societe` int(10) NOT NULL,
+  `fk_id_personne` int(10) UNSIGNED NOT NULL,
+  `fk_id_type` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `factures`
 --
 
-INSERT INTO `factures` (`id`, `numero`, `date`, `objet`) VALUES
-(1, 'Q055L9Y29', '2018-08-23 06:10:07', 'Remise SFR Presse'),
-(2, 'B228M6N03', '2018-08-27 00:00:00', 'Achat fournitures bureau'),
-(3, 'L280B0G32', '2018-08-29 14:21:05', 'Achat marchandises fête de l\'été'),
-(4, 'G033K8T01', '2018-08-30 07:06:32', 'Paiement fournisseurs cables');
+INSERT INTO `factures` (`id`, `numero`, `date`, `objet`, `fk_id_societe`, `fk_id_personne`, `fk_id_type`) VALUES
+(5, 'Q055L9Y29', '2018-08-23 06:10:07', 'achat', 4, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -150,7 +150,10 @@ INSERT INTO `type` (`id_type`, `type`) VALUES
 -- Index pour la table `factures`
 --
 ALTER TABLE `factures`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_societe` (`fk_id_societe`),
+  ADD KEY `fk_id_personne` (`fk_id_personne`),
+  ADD KEY `fk_id_type` (`fk_id_type`);
 
 --
 -- Index pour la table `Personnes`
@@ -186,7 +189,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT pour la table `factures`
 --
 ALTER TABLE `factures`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `Personnes`
@@ -209,6 +212,14 @@ ALTER TABLE `type`
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `factures`
+--
+ALTER TABLE `factures`
+  ADD CONSTRAINT `factures_ibfk_1` FOREIGN KEY (`fk_id_personne`) REFERENCES `Personnes` (`id_personne`),
+  ADD CONSTRAINT `factures_ibfk_2` FOREIGN KEY (`fk_id_societe`) REFERENCES `societes` (`id_societe`),
+  ADD CONSTRAINT `factures_ibfk_3` FOREIGN KEY (`fk_id_type`) REFERENCES `type` (`id_type`);
 
 --
 -- Contraintes pour la table `Personnes`
