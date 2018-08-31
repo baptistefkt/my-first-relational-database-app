@@ -1,5 +1,5 @@
-<?php include 'partials/header.php' ?>
-<?php include 'partials/appeldb.php' ?>
+<?php include 'header.php' ?>
+
   <div class="container">
   <h3>5 dernières factures</h3>
   <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>

@@ -1,5 +1,5 @@
 <?php
-require 'sql.php';
+require '../Method/sql.php';
 $id= $_GET['id'];
 $resultat = $bdd->prepare('SELECT * FROM Personnes WHERE id=:id');
 $resultat->bindParam(':id',$id);

@@ -26,20 +26,20 @@
          <a href="index.html" class="brand-logo "><img class="responsive-img" id="logo" src=""/></a>COGIP</a>
          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
          <ul id="nav-mobile" class="right hide-on-med-and-down">
-           <li><a href="cogip.php">Accueil</a></li>
+           <li><a href="accueilController.php">Accueil</a></li>
            <!-- Dropdown Trigger -->
            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Factures<i class="material-icons right">arrow_drop_down</i></a></li>
            <li><a href="#">Sociétés</a></li>
-           <li><a href="cogip.php">Personnes</a></li>
+           <li><a href="personnes.php">Personnes</a></li>
            <li><a href="login.php">Log in</a></li>
          </ul>
        </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="cogip.php">Accueil</a></li>
+      <li><a href="accueilController.php">Accueil</a></li>
       <li><a href="#">Factures</a></li>
       <li><a href="#">Sociétés</a></li>
-      <li><a href="cogip.php">Personnes</a></li>
+      <li><a href="personnes.php">Personnes</a></li>
       <li><a href="#">Log in</a></li>
     </ul>
     <!-- Fin navbar -->

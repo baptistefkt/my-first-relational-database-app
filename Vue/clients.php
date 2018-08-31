@@ -1,6 +1,6 @@
 
-  <?php include 'partials/header.php' ?>
-  <?php include 'partials/appeldb.php' ?>
+  <?php require 'header.php' ?>
+  <?php require '../Model/appeldb.php' ?>
     <div class="container">
     <h3>Historique de clients</h3>
     <a class="waves-effect waves-light btn indigo accent-1" onclick="window.print();return false;">Imprimer</a>
