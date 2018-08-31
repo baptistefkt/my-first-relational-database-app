@@ -1,10 +1,9 @@
 
   <?php require 'header.php' ?>
-  <?php require '../Model/appeldb.php' ?>
     <div class="container">
-    <h3>Historique de clients</h3>
-    <a class="waves-effect waves-light btn indigo accent-1" onclick="window.print();return false;">Imprimer</a>
-    <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
+      <h3>Historique de clients</h3>
+      <a class="waves-effect waves-light btn indigo accent-1" onclick="window.print();return false;">Imprimer</a>
+      <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
       <table>
         <thead>
           <tr>
