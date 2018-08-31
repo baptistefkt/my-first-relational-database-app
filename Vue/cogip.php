@@ -21,6 +21,7 @@ require 'sql.php';
 $donnees=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe');
 $donnees->execute();
 $donneesAffich=$donnees->fetchAll();
+var_dump($donneesAffich);
 
 function out1(){
   global $donneesAffich;
