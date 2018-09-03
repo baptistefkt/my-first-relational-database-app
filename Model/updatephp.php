@@ -5,13 +5,14 @@ $nom = $_POST['nom'];
 $prenom = $_POST['Prenom'];
 $tel = $_POST['tel'];
 $mail = $_POST['mail'];
+$nomsoc = $_POST['societe'];
 
 
 try {
 
 	 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-	 $sql = "UPDATE Personnes SET Nom=:Nom, Prenom=:Prenom, Telephone=:Telephone, Email=:Email WHERE id=:id";
+	 $sql = "UPDATE Personnes SET Nom=:Nom, Prenom=:Prenom, Telephone=:Telephone, Email=:Email, societe_id=:societe_id WHERE id=:id";
 	 // Prepare statement
 	 $stmt = $bdd->prepare($sql);
 	 $stmt->bindParam(':id',$id);
@@ -19,6 +20,7 @@ try {
 	 $stmt->bindParam(':Prenom', $prenom);
 	 $stmt->bindParam(':Telephone', $tel);
 	 $stmt->bindParam(':Email', $mail);
+	 $stmt->bindParam(':societe_id', $nomsoc);
 	 $stmt->execute();
 	 // execute the query
 	 $stmt->execute();
@@ -32,5 +34,5 @@ catch(PDOException $e)
 	 }
 
 $bdd = null;
-header('Location: cogip.php');
+header('Location: ../Vue/clientsVue.php');
 ?>

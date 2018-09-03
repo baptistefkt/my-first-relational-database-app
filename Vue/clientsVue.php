@@ -1,9 +1,10 @@
 
-  <?php require 'header.php' ?>
+  <?php require 'header.php';
+  require '../Model/accueilModel.php'; ?>
     <div class="container">
       <h3>Historique de clients</h3>
       <a class="waves-effect waves-light btn indigo accent-1" onclick="window.print();return false;">Imprimer</a>
-      <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
+      <a href="createClientVue.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
       <table>
         <thead>
           <tr>
@@ -17,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php echo out1(); ?>
+          <?php echo out2(); ?>
         </tbody>
       </table>
     </div>

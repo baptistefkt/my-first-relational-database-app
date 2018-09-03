@@ -1,3 +1,7 @@
+<?php  require '../Model/sql.php';
+require '../Model/updateClientModel.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +12,7 @@
 <body>
 	<a href="/cogip.php">Liste des données</a>
 	<h1>Ajouter</h1>
-	<form action="createphp.php" method="post">
+	<form action="../Model/createphp.php" method="post">
 		<div>
 			<label for="Nom">Nom</label>
 			<input type="text" name="Nom" value="">
@@ -26,6 +30,16 @@
 		<div>
 			<label for="Email">Email</label>
 			<input type="text" name="Email" value="">
+		</div>
+		<div>
+			<SELECT name="societe" >
+				<?php echo out1bis() ?>
+				<option value="">Autre</option>
+			</SELECT>
+		</div>
+		<div>
+			<label for="facture">Facture</label>
+			<input type="text" name="facture" value="7">
 		</div>
 		<button type="submit" name="button">Envoyer</button>
 	</form>

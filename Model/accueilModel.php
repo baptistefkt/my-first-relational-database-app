@@ -13,10 +13,11 @@ function out1(){
     echo '<td>'.$s[4].'</td>';
     echo '<td>'.$s[5].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $s['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="update.php?id='. $s['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.'<a href="updateClientVue.php?id='. $s['id'].'">'.'Modifier</a></td></tr>';
   }
 }
 ?>
+
 <?php
 $donnees2=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe ');
 $donnees2->execute();
@@ -31,8 +32,8 @@ function out2(){
     echo '<td>'.$p[8].'</td>';
     echo '<td>'.$p[9].'</td>';
     echo '<td>'.$p[14].'</td>';
-    echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="update.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.'<a href="../Model/delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
+    echo '<td>'.'<a href="updateClientVue.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
   }
 }
  ?>

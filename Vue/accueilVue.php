@@ -1,4 +1,5 @@
-<?php include 'header.php' ?>
+<?php include 'header.php';
+require '../Model/accueilModel.php';?>
 
   <div class="container">
   <h3>5 dernières factures</h3>
