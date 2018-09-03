@@ -1,4 +1,4 @@
-        <?php include 'partials/header.php' ?>
+        <?php include 'header.php' ?>
         <form id='login' action='logsign.php' method='post' accept-charset='UTF-8'>
             <fieldset >
                 <legend>Login</legend>
