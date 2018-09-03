@@ -35,14 +35,13 @@ function out2(){
     echo '<td>'.$p[2].'</td>';
     echo '<td>'.$p[3].'</td>';
     echo '<td>'.$p[4].'</td>';
-    echo '<td>'.$p[8].'</td>';
-    echo '<td>'.$p[9].'</td>';
-    echo '<td>'.$p[14].'</td>';
-    echo '<td>'.'<a href="../Model/delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="updateClientVue.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.$p[7].'</td>';
+    echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
+    echo '<td>'.'<a href="update.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
   }
 }
  ?>
+
 <?php
 $donnees3=$bdd->prepare('SELECT * FROM factures as f LEFT JOIN societes as s on f.fk_id_societe=s.id_societe ORDER BY date DESC LIMIT 5' );
 $donnees3->execute();
