@@ -1,7 +1,7 @@
 <?php
 require 'sql.php';
 
-$donnees=$bdd->prepare('SELECT * FROM societes as s');
+$donnees=$bdd->prepare('SELECT * FROM societes as s LEFT JOIN societe_as_type as t on s.id_societe=t.societe_id ORDER BY id_societe DESC LIMIT 5');
 $donnees->execute();
 $donneesAffich=$donnees->fetchAll();
 function out1(){
@@ -12,13 +12,19 @@ function out1(){
     echo '<td>'.$s[3].'</td>';
     echo '<td>'.$s[4].'</td>';
     echo '<td>'.$s[5].'</td>';
+
+    if ($s[7]== '1'){
+        echo '<td> Client </td>';
+    } else {
+        echo '<td> Fournisseur </td>';
+    };
     echo '<td>'.'<a href="delete.php?id='. $s['id'].'">'.'Supprimer</a></td>';
     echo '<td>'.'<a href="update.php?id='. $s['id'].'">'.'Modifier</a></td></tr>';
   }
 }
 ?>
 <?php
-$donnees2=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe ');
+$donnees2=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe ORDER BY id_personne DESC LIMIT 5');
 $donnees2->execute();
 $donneesAffich2=$donnees2->fetchAll();
 function out2(){
@@ -28,25 +34,23 @@ function out2(){
     echo '<td>'.$p[2].'</td>';
     echo '<td>'.$p[3].'</td>';
     echo '<td>'.$p[4].'</td>';
-    echo '<td>'.$p[8].'</td>';
-    echo '<td>'.$p[9].'</td>';
-    echo '<td>'.$p[14].'</td>';
+    echo '<td>'.$p[7].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
     echo '<td>'.'<a href="update.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
   }
 }
  ?>
 <?php
-$donnees3=$bdd->prepare('SELECT * FROM factures as f LEFT JOIN societes as s on s.factures_id=f.id ');
+$donnees3=$bdd->prepare('SELECT * FROM factures as f LEFT JOIN societes as s on f.fk_id_societe=s.id_societe ORDER BY date DESC LIMIT 5' );
 $donnees3->execute();
 $donneesAffich3=$donnees3->fetchAll();
 function out3(){
   global $donneesAffich3;
   foreach($donneesAffich3 as $f){
-    echo '<tr><td>'.$f[1].'</td>';
-    echo '<td>'.$f[2].'</td>';
+    echo '<tr><td>'.$f[2].'</td>';
+    echo '<td>'.$f[1].'</td>';
+    echo '<td>'.$f[8].'</td>';
     echo '<td>'.$f[3].'</td>';
-    echo '<td>'.$f[5].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'Supprimer</a></td>';
     echo '<td>'.'<a href="update.php?id='. $f['id'].'">'.'Modifier</a></td></tr>';
   }
