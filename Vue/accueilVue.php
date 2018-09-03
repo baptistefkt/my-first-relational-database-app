@@ -7,9 +7,10 @@ require '../Model/accueilModel.php';?>
     <table>
       <thead>
         <tr>
-            <th>Factures</th>
             <th>Date</th>
-            <th></th>
+            <th>Facture</th>
+            <th>Société</th>
+            <th>Objet</th>
         </tr>
       </thead>
       <tbody>
@@ -25,7 +26,10 @@ require '../Model/accueilModel.php';?>
         <tr>
             <th>Société</th>
             <th>Adresse société</th>
+            <th>Pays</th>
+            <th>Téléphone</th>
             <th>TVA</th>
+            <th>Type société</th>
         </tr>
       </thead>
       <tbody>
@@ -41,7 +45,7 @@ require '../Model/accueilModel.php';?>
         <tr>
             <th>Nom</th>
             <th>Prénom</th>
-            <th>Telephone</th>
+            <th>Téléphone</th>
             <th>Email</th>
             <th>Société</th>
         </tr>
