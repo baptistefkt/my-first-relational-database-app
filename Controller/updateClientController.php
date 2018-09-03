@@ -1,4 +1,4 @@
 <?php
-require '../Model/updateClientmodel';
-require '../Vue/updateClientVue';
+require '../Model/updateClientModel.php';
+require '../Vue/updateClientVue.php';
 ?>
