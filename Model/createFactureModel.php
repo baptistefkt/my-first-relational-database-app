@@ -14,5 +14,5 @@ require 'sql.php';
  // echo "New records created successfully";
 
 
- header('Location: ../Controller/facturesController.php');
+ header('Location: ../Vue/accueilVue.php');
 ?>

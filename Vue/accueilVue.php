@@ -3,8 +3,8 @@ require '../Model/accueilModel.php';?>
 
   <div class="container">
   <h3>5 dernières factures</h3>
-  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures</a>
-  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
+  <a href="../Controller/facturesController.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures</a>
+  <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle facture</a>
     <table>
       <thead>
         <tr>

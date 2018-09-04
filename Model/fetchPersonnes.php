@@ -7,8 +7,8 @@ require 'sql.php';
     $donneesAffichPersonnes=$donneesPersonnes->fetchAll();
     function outPersonnes(){
       global $donneesAffichPersonnes;
-      foreach ($donneesAffichPersonnes as $p){
-          echo '<option value="'.$p[0].'">'.$p[1].'</option>';
+      foreach ($donneesAffichPersonnes as $pe){
+          echo '<option value="'.$pe[0].'">'.$pe[1].'</option>';
       }
     }
 $donneesPersonnes->closeCursor();

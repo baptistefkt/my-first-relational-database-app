@@ -4,7 +4,7 @@ include 'header.php';
 
         <div class="container">
             <h3>Dernières factures</h3>
-            <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn indigo accent-1">Créer une nouvelle facture</a>
+            <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle facture</a>
             <table>
                 <thead>
                     <tr>
