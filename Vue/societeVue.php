@@ -1,4 +1,6 @@
-  <?php require 'header.php';
+  <?php 
+  require 'header.php';
+  require '../Model/_displaySoc.php';
   ?>
     <div class="container">
       <h3><?=$type?>s</h3>
@@ -15,7 +17,7 @@
           </tr>
         </thead>
         <tbody>
-          <?php echo displaySocType($dataSocBasic,$type); ?>
+          <?php echo sortSocType($dataSocBasic,$type); ?>
         </tbody>
       </table>
     </div>
