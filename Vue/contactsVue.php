@@ -1,8 +1,8 @@
 
   <?php require 'header.php';
-  require '../Model/accueilModel.php'; ?>
+  ?>
     <div class="container">
-      <h3>Historique de clients</h3>
+      <h3>Historique de personnes de contact</h3>
       <a class="waves-effect waves-light btn indigo accent-1" onclick="window.print();return false;">Imprimer</a>
       <a href="createClientVue.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
       <table>

@@ -1,6 +1,3 @@
-<?php  require '../Model/sql.php';
-require '../Model/updateClientModel.php';
-?>
 
 <!DOCTYPE html>
 <html>

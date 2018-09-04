@@ -19,7 +19,7 @@ function out1(){
         echo '<td> Fournisseur </td>';
     };
     echo '<td>'.'<a href="delete.php?id='. $s['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="updateClientVue.php?id='. $s['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.'<a href="updateContactController.php?id='. $s['id'].'">'.'Modifier</a></td></tr>';
   }
 }
 ?>
@@ -37,7 +37,7 @@ function out2(){
     echo '<td>'.$p[4].'</td>';
     echo '<td>'.$p[7].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="update.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.'<a href="updateContactController.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
   }
 }
  ?>

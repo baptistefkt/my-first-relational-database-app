@@ -13,9 +13,8 @@ while ($donnees = $resultat->fetch())
   $societe= $donnees['nom'];
 }
 $resultat->closeCursor();
-?>
-<?php
 
+// pre-fill
 $donneesbis=$bdd->prepare('SELECT * FROM societes as s');
 $donneesbis->execute();
 $donneesAffichbis=$donneesbis->fetchAll();

@@ -1,5 +1,16 @@
 <?php
 require 'sql.php';
+$donneesbis=$bdd->prepare('SELECT * FROM societes as s');
+$donneesbis->execute();
+$donneesAffichbis=$donneesbis->fetchAll();
+function out1bis(){
+  global $donneesAffichbis;
+  foreach($donneesAffichbis as $sn){
+    echo '<option value="'.$sn[0].'">'.$sn[1].'</option>';
+
+  }
+}
+
 try {
  $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  $stmt = $bdd->prepare("INSERT INTO Personnes ( Nom, Prenom, Telephone, Email, societe_id, factures_id)
@@ -13,12 +24,14 @@ try {
  $stmt->execute();
  echo "New records created successfully";
 }
-	catch(PDOException $e)
-			{
-			echo "Error: " . $e->getMessage();
-			}
 
-	$stmt->close();
-	$bdd->close();
-  header('Location: ../Vue/clientsVue.php');
+catch(PDOException $e){
+	echo "Error: " . $e->getMessage();
+}
+
+
+$stmt->close();
+$bdd->close();
+  header('Location: ../Vue/contactVue.php');
 ?>
+

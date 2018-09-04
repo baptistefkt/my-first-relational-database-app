@@ -1,12 +1,10 @@
-<?php  require '../Model/sql.php';
-require '../Model/updateClientModel.php';
-?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Ajouter un client</title>
+	<title>Ajouter un contact</title>
 	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
