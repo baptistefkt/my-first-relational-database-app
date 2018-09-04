@@ -1,16 +1,3 @@
-<<<<<<< HEAD:Vue/createContactVue.php
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Ajouter un contact</title>
-	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
-</head>
-<body>
-	<a href="/cogip.php">Liste des données</a>
-=======
 <?php
 include 'header.php';
 require '../Model/sql.php';
@@ -18,7 +5,6 @@ require '../Model/updateContactModel.php';
 ?>
 
 	<a href="/accueilVue.php">Liste des données</a>
->>>>>>> dev:Vue/createContactVue.php
 	<h1>Ajouter</h1>
 	<form action="../Model/createphp.php" method="post">
 		<div>

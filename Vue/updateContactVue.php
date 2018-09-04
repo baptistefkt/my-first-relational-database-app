@@ -1,11 +1,8 @@
-<<<<<<< HEAD:Vue/updateContactVue.php
-=======
 <?php
 include 'header.php';
 require '../Model/sql.php';
 require '../Model/updateContactModel.php';
 ?>
->>>>>>> dev:Vue/updateContactVue.php
 
 <body>
 	<a href="/php-pdo/read.php">Liste des données</a>
