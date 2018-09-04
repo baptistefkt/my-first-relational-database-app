@@ -8,7 +8,7 @@ $donneesAffich2=$donnees2->fetchAll();
 function outContact(){
   global $donneesAffich2;
   foreach($donneesAffich2 as $p){
-    echo '<tr><td>'.$p[1].'</td>';
+    echo '<tr><td>'.'<a href="../Vue/detailsContactVue.php?id='. $p['id_personnes'].'">'.$p[1].'</a></td>';
     echo '<td>'.$p[2].'</td>';
     echo '<td>'.$p[3].'</td>';
     echo '<td>'.$p[4].'</td>';
