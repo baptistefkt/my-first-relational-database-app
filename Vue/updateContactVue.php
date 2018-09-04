@@ -1,14 +1,9 @@
-<?php  require '../Model/sql.php';
-require '../Model/updateClientModel.php';
+<?php
+include 'header.php';
+require '../Model/sql.php';
+require '../Model/updateContactModel.php';
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Modifier un client</title>
-	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
-</head>
 <body>
 	<a href="/php-pdo/read.php">Liste des données</a>
 	<h1>Modifier</h1>
@@ -29,13 +24,12 @@ require '../Model/updateClientModel.php';
 			<label for="mail">Email</label>
 			<input type="text" name="mail" value="<?php echo $mail ?>">
 		</div>
-		<div>
-			<SELECT name="societe" >
+		<div class="input-field ">
+			<select class="browser-default" name="societe" >
 				<option value="<?php echo $societe ?>"><?php echo $societe ?></option>
 				<?php echo out1bis() ?>
-			</SELECT>
+			</select>
 		</div>
 		<button type="submit">Envoyer</button>
 	</form>
-</body>
-</html>
+<?php include 'footer.php' ?>

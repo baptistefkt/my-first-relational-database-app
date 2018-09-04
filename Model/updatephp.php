@@ -34,5 +34,5 @@ catch(PDOException $e)
 	 }
 
 $bdd = null;
-header('Location: ../Vue/clientsVue.php');
+header('Location: ../Vue/contacVue.php');
 ?>

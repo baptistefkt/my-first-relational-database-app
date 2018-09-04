@@ -1,16 +1,10 @@
-<?php  require '../Model/sql.php';
-require '../Model/updateClientModel.php';
+<?php
+include 'header.php';
+require '../Model/sql.php';
+require '../Model/updateContactModel.php';
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>Ajouter un client</title>
-	<link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
-</head>
-<body>
-	<a href="/cogip.php">Liste des données</a>
+	<a href="/accueilVue.php">Liste des données</a>
 	<h1>Ajouter</h1>
 	<form action="../Model/createphp.php" method="post">
 		<div>
@@ -43,5 +37,4 @@ require '../Model/updateClientModel.php';
 		</div>
 		<button type="submit" name="button">Envoyer</button>
 	</form>
-</body>
-</html>
+<?php include 'footer.php' ?>

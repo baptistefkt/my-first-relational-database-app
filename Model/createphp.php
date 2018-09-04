@@ -20,5 +20,5 @@ try {
 
 	$stmt->close();
 	$bdd->close();
-  header('Location: ../Vue/clientsVue.php');
+  header('Location: ../Vue/contactVue.php');
 ?>

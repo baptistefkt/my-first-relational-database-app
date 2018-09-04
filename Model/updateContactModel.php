@@ -1,7 +1,8 @@
 <?php
 require 'sql.php';
+
 $id= $_GET['id'];
-$resultat = $bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe  WHERE id=:id');
+$resultat = $bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe  WHERE id_personnes=:id');
 $resultat->bindParam(':id',$id);
 $resultat->execute();
 while ($donnees = $resultat->fetch())

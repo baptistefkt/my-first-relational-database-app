@@ -3,7 +3,8 @@ require '../Model/accueilModel.php';?>
 
   <div class="container">
   <h3>5 dernières factures</h3>
-  <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
+  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures</a>
+  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
     <table>
       <thead>
         <tr>
@@ -20,7 +21,8 @@ require '../Model/accueilModel.php';?>
   </div>
   <div class="container">
   <h3>5 dernières sociétés</h3>
-  <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
+  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les sociétés</a>
+  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
     <table>
       <thead>
         <tr>
@@ -38,8 +40,9 @@ require '../Model/accueilModel.php';?>
     </table>
   </div>
   <div class="container">
-  <h3>5 dernières personnes</h3>
-  <a href="create.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau client</a>
+  <h3>5 derniers contacts</h3>
+  <a href="contactVue.php" class="waves-effect waves-light btn cyan darken-2">Voir tous les contacts</a>
+  <a href="createContactVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
     <table>
       <thead>
         <tr>
@@ -55,5 +58,4 @@ require '../Model/accueilModel.php';?>
       </tbody>
     </table>
   </div>
-</body>
-</html>
+<?php include 'footer.php' ?>

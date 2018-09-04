@@ -6,12 +6,8 @@
                 <label for='username'>Nom d'utilisateur:</label>
                 <input type='text' name='username' id='username'  maxlength="50" />
                 <label for='password'>Mot de passe:</label>
-                <input type='password' name='password' id='password' maxlength="50" />      
-                <input type='submit' name='Submit' value='Submit' />         
+                <input type='password' name='password' id='password' maxlength="50" />
+                <input type='submit' name='Submit' value='Submit' />
             </fieldset>
         </form>
-  
-    </body>
-
-</html>
-
+  <?php include 'footer.php' ?>
