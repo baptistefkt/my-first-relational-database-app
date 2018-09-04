@@ -7,10 +7,8 @@ $loginRaw=$bdd->prepare('SELECT username, password FROM utilisateurs');
 $loginRaw->execute();
 $loginData=$loginRaw->fetchAll(PDO::FETCH_NUM);
 
-// $userName=sanitize($_POST['username'],'string');
-// $userPWD=sanitize($_POST['password'],'string');
-$userName=$_POST['username'];
-$userPWD=$_POST['password'];
+$userName=sanitize($_POST['username'],'string');
+$userPWD=sanitize($_POST['password'],'string');
 $userInput=array (0=>$userName, 1=>$userPWD);
 
 
