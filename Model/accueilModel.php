@@ -18,14 +18,14 @@ function out1(){
     } else {
         echo '<td> Fournisseur </td>';
     };
-    echo '<td>'.'<a href="delete.php?id='. $s['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="updateContactController.php?id='. $s['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td><a href="delete.php?id='. $s['id'].'"><i class="far fa-trash-alt"></i></a></td>';
+    echo '<td>'.'<a href="updateClientVue.php?id='. $s['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
   }
 }
 ?>
 
 <?php
-$donnees2=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe ORDER BY id_personne DESC LIMIT 5');
+$donnees2=$bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe ORDER BY id_personnes DESC LIMIT 5');
 $donnees2->execute();
 $donneesAffich2=$donnees2->fetchAll();
 function out2(){
@@ -36,8 +36,8 @@ function out2(){
     echo '<td>'.$p[3].'</td>';
     echo '<td>'.$p[4].'</td>';
     echo '<td>'.$p[7].'</td>';
-    echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="updateContactController.php?id='. $p['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td><a href="delete.php?id='. $p['id'].'"><i class="far fa-trash-alt"></i></a></td>';
+    echo '<td><a href="../Vue/updateContactVue.php?id='. $p['id'].'"><i class="far fa-edit"></i></a></td></tr>';
   }
 }
  ?>
@@ -53,8 +53,8 @@ function out3(){
     echo '<td>'.$f[1].'</td>';
     echo '<td>'.$f[8].'</td>';
     echo '<td>'.$f[3].'</td>';
-    echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="update.php?id='. $f['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
+    echo '<td>'.'<a href="update.php?id='. $f['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
   }
 }
 ?>

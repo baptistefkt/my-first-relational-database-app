@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Vue/createContactVue.php
 
 
 <!DOCTYPE html>
@@ -9,6 +10,15 @@
 </head>
 <body>
 	<a href="/cogip.php">Liste des données</a>
+=======
+<?php
+include 'header.php';
+require '../Model/sql.php';
+require '../Model/updateContactModel.php';
+?>
+
+	<a href="/accueilVue.php">Liste des données</a>
+>>>>>>> dev:Vue/createContactVue.php
 	<h1>Ajouter</h1>
 	<form action="../Model/createphp.php" method="post">
 		<div>
@@ -41,5 +51,4 @@
 		</div>
 		<button type="submit" name="button">Envoyer</button>
 	</form>
-</body>
-</html>
+<?php include 'footer.php' ?>
