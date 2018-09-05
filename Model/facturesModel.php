@@ -8,7 +8,7 @@ function outFact(){
   global $donneesAffichFact;
   foreach($donneesAffichFact as $f){
     echo '<tr><td>'.$f[2].'</td>';
-    echo '<td>'.$f[1].'</td>';
+    echo '<td><a href="../Vue/detailFactureVue.php?id='. $f['id'] . '">'.$f[1].'</td>';
     echo '<td>'.$f[7].'</td>';
     echo '<td>'.$f[3].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'Supprimer</a></td>';

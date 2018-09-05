@@ -16,8 +16,8 @@ while ($donnees = $resultat->fetch())
 }
 $resultat->closeCursor();
 ?>
-<?php
 
+<?php
 $donneesbis=$bdd->prepare('SELECT * FROM societes as s');
 $donneesbis->execute();
 $donneesAffichbis=$donneesbis->fetchAll();

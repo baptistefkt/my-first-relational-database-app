@@ -1,12 +1,11 @@
 <?php
 include 'header.php';
-require '../Model/sql.php';
-require '../Model/updateContactModel.php';
+require '../Model/createUpdateContactModel.php';
 ?>
 
 	<a href="/accueilVue.php">Liste des données</a>
 	<h1>Ajouter</h1>
-	<form action="../Model/createphp.php" method="post">
+	<form action="../Model/createContactphp.php" method="post">
 		<div>
 			<label for="Nom">Nom</label>
 			<input type="text" name="Nom" value="">
@@ -25,8 +24,8 @@ require '../Model/updateContactModel.php';
 			<label for="Email">Email</label>
 			<input type="text" name="Email" value="">
 		</div>
-		<div>
-			<SELECT name="societe" >
+		<div class="input-field">
+			<SELECT name="societe" class="browser-default"  >
 				<?php echo out1bis() ?>
 				<option value="">Autre</option>
 			</SELECT>

@@ -1,13 +1,12 @@
 <?php
 include 'header.php';
-require '../Model/sql.php';
-//require '../Model/updateContactModel.php';
+require '../Model/createUpdateContactModel.php';
 ?>
 
 <body>
 	<a href="/php-pdo/read.php">Liste des données</a>
 	<h1>Modifier</h1>
-	<form action="../Model/updatephp.php?id=<?php echo intval($id)?>" method="post">
+	<form action="../Model/updateContactphp.php?id=<?php echo intval($id)?>" method="post">
 		<div>
 			<label for="nom">Nom</label>
 			<input type="text" name="nom" value="<?php echo $nom ?>">
@@ -24,7 +23,7 @@ require '../Model/sql.php';
 			<label for="mail">Email</label>
 			<input type="text" name="mail" value="<?php echo $mail ?>">
 		</div>
-		<div class="input-field ">
+		<div class="input-field">
 			<select class="browser-default" name="societe" >
 				<option value="<?php echo $societe ?>"><?php echo $societe ?></option>
 				<?= out1bis() ?>

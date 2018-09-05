@@ -1,38 +1,32 @@
 <?php
 include 'header.php';
-require '../Model/sql.php';
 require '../Model/contactPrecisModel.php';
  ?>
  <div class="container">
    <h3>Details du contact : <?php echo $nom." ".$prenom ?></h3>
    <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer</a>
-   <table class="bordered centered responsive-table">
-     <thead>
-       <tr>
-           <th>Nom</th>
-           <th>Prénom</th>
-           <th>Telephone</th>
-           <th>Email</th>
-           <th>Société</th>
-           <th>Adresse société</th>
-           <th>Factures liées</th>
-       </tr>
-     </thead>
-     <tbody>
+   <div class="row">
+       <div class="col s6 m6">
+         <div class="card-panel cyan darken-2">
+           <div class="card-content white-text">
+             <span class="card-title"></span>
+             <ul>
+                <li>Nom : <?php echo " ".$nom;  ?></li>
+                <li>Prénom: <?php echo " ".$prenom; ?></li>
+                <li>Telephone: <?php echo " ".$tel; ?></li>
+                <li>Email: <?php echo " ".$mail; ?></li>
+                <li>Société:<?php echo " ".$societe; ?> </li>
+                <li>Adresse société:<?php echo " ".$adressesoc; ?> </li>
+                <li>Factures liées: <?php echo " ".$factures; ?></li>
+             </ul>
+           </div>
+         </div>
+       </div>
+     </div>
          <?php
-         echo '<tr><td>'.$nom.'</td>';
-         echo '<td>'.$prenom.'</td>';
-         echo '<td>'.$tel.'</td>';
-         echo '<td>'.$mail.'</td>';
-         echo '<td>'.$societe.'</td>';
-         echo '<td>'.$adressesoc.'</td>';
-         echo '<td>'.$factures.'</td>';
-         echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
-         echo '<td>'.'<a href="../Vue/updateContactVue.php?id='. $p['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
-
+         echo '<a href="deleteContact.php?id='. $id.'">'.'<i class="far fa-trash-alt"></i></a>';
+         echo '<a href="../Vue/updateContactVue.php?id='. $id.'">'.'<i class="far fa-edit"></i></a>';
           ?>
-     </tbody>
-   </table>
  </div>
 
 <?php
