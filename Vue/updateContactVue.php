@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
 require '../Model/sql.php';
-require '../Model/updateContactModel.php';
+//require '../Model/updateContactModel.php';
 ?>
 
 <body>
@@ -27,7 +27,7 @@ require '../Model/updateContactModel.php';
 		<div class="input-field ">
 			<select class="browser-default" name="societe" >
 				<option value="<?php echo $societe ?>"><?php echo $societe ?></option>
-				<?php echo out1bis() ?>
+				<?= out1bis() ?>
 			</select>
 		</div>
 		<button type="submit">Envoyer</button>
