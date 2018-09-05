@@ -19,8 +19,10 @@ function out1(){
     } else {
         echo '<td> Client </td>';
     };
-    echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
-    echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+      if($_SESSION['userType']=='admin'){
+      echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
+      echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    }
   }
 }
 ?>
@@ -37,8 +39,10 @@ function out2(){
     echo '<td>'.$p[3].'</td>';
     echo '<td>'.$p[4].'</td>';
     echo '<td>'.$p[7].'</td>';
-    echo '<td>'.'<a href="deleteContact.php?id='. $p['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
-    echo '<td>'.'<a href="../Vue/updateContactVue.php?id='. $p['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    if($_SESSION['userType']=='admin'){
+      echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
+      echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    }
   }
 }
  ?>
@@ -54,8 +58,10 @@ function out3(){
     echo '<td><a href="../Vue/detailFactureVue.php?id='. $f['id'] . '">'.$f[1].'</td>';
     echo '<td>'.$f[7].'</td>';
     echo '<td>'.$f[3].'</td>';
-    echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
-    echo '<td>'.'<a href="update.php?id='. $f['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    if($_SESSION['userType']=='admin'){
+      echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
+      echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    }
   }
 }
 ?>

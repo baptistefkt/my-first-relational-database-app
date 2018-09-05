@@ -1,8 +1,8 @@
 <?php
-
 session_start();
-// var_dump($_SESSION);
-
+if(empty($_SESSION['userType'])){
+    header('location:loginController.php');
+};
  require '../Model/accueilModel.php';
  require '../Vue/accueilVue.php';
  ?>
