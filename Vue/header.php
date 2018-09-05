@@ -25,7 +25,7 @@ $user=$_SESSION['login'];
          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
          <ul id="nav-mobile" class="right hide-on-med-and-down">
            <li><a href="../Controller/accueilController.php">Accueil</a></li>
-           <li><a href="#!" >Factures</a></li>
+           <li><a href="../Controller/facturesController.php" >Factures</a></li>
            <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
            <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
            <li><a href="../Controller/contactController.php">Contacts</a></li>
@@ -36,10 +36,10 @@ $user=$_SESSION['login'];
     </nav>
     <ul class="sidenav" id="mobile-demo">
       <li><a href="../Controller/accueilController.php">Accueil</a></li>
-      <li><a href="#">Factures</a></li>
+      <li><a href="../Controller/facturesController.php">Factures</a></li>
       <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
       <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
-      <li><a href="../Controller/contactController.php">Contacts</a></li>
+      <li><a href="../Vue/contactVue.php">Contacts</a></li>
       <li><a href="../Controller/logoutController.php">Log out</a></li>
     </ul>
     <!-- Fin navbar -->
