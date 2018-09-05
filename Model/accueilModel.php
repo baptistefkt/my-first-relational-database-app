@@ -19,7 +19,7 @@ function out1(){
         echo '<td> Client </td>';
     };
     echo '<td><a href="delete.php?id='. $s['id'].'"><i class="far fa-trash-alt"></i></a></td>';
-    echo '<td>'.'<a href="updateClientVue.php?id='. $s['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
   }
 }
 ?>

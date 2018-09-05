@@ -2,13 +2,6 @@
 require 'sql.php';
 require 'sanitizer.php';
 
-function checkEmptyPost($postValue,$filterType){
-    if (isset($postValue) && !empty($postValue)){
-        $var=sanitize($postValue,$filterType);
-         
-    }
-    return $var;    
-}
 $socNom;$socAdresse;$socPays;$socTel;$socTVA;$socType;
 
 $socNom=checkEmptyPost($_POST['nom'],'string');

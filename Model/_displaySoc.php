@@ -1,6 +1,6 @@
 <?php
 function displaySoc($soc){       
-    echo '<tr><td>'.$soc['nom'].'</td>';
+    echo '<tr><td><a href=socDetailController.php?socId='.$soc['id_societe'].'>'.$soc['nom'].'</a></td>';
     echo '<td>'.$soc['adresse'].'</td>';
     echo '<td>'.$soc['pays'].'</td>';
     echo '<td>'.$soc['telephone'].'</td>';
