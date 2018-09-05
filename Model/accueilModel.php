@@ -36,7 +36,7 @@ function out2(){
     echo '<td>'.$p[3].'</td>';
     echo '<td>'.$p[4].'</td>';
     echo '<td>'.$p[7].'</td>';
-    echo '<td>'.'<a href="delete.php?id='. $p['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
+    echo '<td>'.'<a href="deleteContact.php?id='. $p['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
     echo '<td>'.'<a href="../Vue/updateContactVue.php?id='. $p['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
   }
 }
