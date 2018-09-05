@@ -15,8 +15,10 @@ function outContact(){
     echo '<td>'.$p[7].'</td>';
     echo '<td>'.$p[8].'</td>';
     echo '<td>'.$p[13].'</td>';
-    echo '<td>'.'<a href="deleteContact.php?id='. $p['id_personnes'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
-    echo '<td>'.'<a href="../Vue/updateContactVue.php?id='. $p['id_personnes'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    if($_SESSION['userType']=='admin'){
+      echo '<td>'.'<a href="deleteContact.php?id='. $p['id_personnes'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
+      echo '<td>'.'<a href="../Vue/updateContactVue.php?id='. $p['id_personnes'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+    }
   }
 }
  ?>

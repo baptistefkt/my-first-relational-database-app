@@ -4,7 +4,14 @@ function displaySoc($soc){
     echo '<td>'.$soc['adresse'].'</td>';
     echo '<td>'.$soc['pays'].'</td>';
     echo '<td>'.$soc['telephone'].'</td>';
-    echo '<td>'.$soc['tva'].'</td></tr>';      
+    echo '<td>'.$soc['tva'].'</td>';    
+    if($_SESSION['userType']=='admin'){
+        echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
+        echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+      }
+    else{
+        echo'</tr>';
+    }  
 }
 
 function sortSocType($array,$key){
@@ -25,4 +32,3 @@ function displayData($array,$length){
     }   
 }
 ?>
-
