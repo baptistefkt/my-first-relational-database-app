@@ -1,4 +1,6 @@
-<?php ?>
+<?php 
+$user=$_SESSION['login'];
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,9 +31,11 @@
            <li><a href="accueilController.php">Accueil</a></li>
            <!-- Dropdown Trigger -->
            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Factures<i class="material-icons right">arrow_drop_down</i></a></li>
-           <li><a href="#">Sociétés</a></li>
+           <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
+           <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
            <li><a href="../Vue/contactVue.php">Contacts</a></li>
-           <li><a href="login.php">Log in</a></li>
+           <li>Bonjour <?=$user?></li>
+           <li><a href="../Controller/logoutController.php">Log out</a></li>
          </ul>
        </div>
     </nav>
