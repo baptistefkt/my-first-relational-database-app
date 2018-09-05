@@ -6,7 +6,7 @@ require '../Model/detailFactureModel.php';
 
     <div class="container">
         <h3>Détail de la facture n° : <?php echo $factureNum;?></h3>
-        <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer</a>
+        <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer<i class="material-icons right">print</i></a>
         <h5>Date : </h5>
         <h6><?php echo $factureDate; ?></h6>
         <h5>Société liée à la facture :</h5>

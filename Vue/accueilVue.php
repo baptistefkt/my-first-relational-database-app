@@ -3,8 +3,8 @@
 
   <div class="container">
   <h3>5 dernières factures</h3>
-  <a href="../Controller/facturesController.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures</a>
-  <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle facture</a>
+  <a href="../Controller/facturesController.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures<i class="material-icons right">visibility</i></a>
+  <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle facture<i class="material-icons right">add</i></a>
     <table>
       <thead>
         <tr>
