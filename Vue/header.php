@@ -1,4 +1,4 @@
-<?php 
+<?php
 $user=$_SESSION['login'];
 ?>
 <!DOCTYPE html>
@@ -19,31 +19,27 @@ $user=$_SESSION['login'];
   </head>
   <body>
     <!-- Navbar -->
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!"> Historique des factures</a></li>
-      <li><a href="#!">Créer une facture</a></li>
-    </ul>
     <nav>
        <div class="nav-wrapper cyan darken-2">
-         <a href="../Vue/accueilVue.php" class="brand-logo "><i class="fas fa-coffee"></i>COGIP</a>
+         <a href="../Controller/accueilController.php" class="brand-logo "><i class="fas fa-coffee"></i>COGIP</a>
          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
          <ul id="nav-mobile" class="right hide-on-med-and-down">
-           <li><a href="accueilController.php">Accueil</a></li>
-           <!-- Dropdown Trigger -->
-           <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Factures<i class="material-icons right">arrow_drop_down</i></a></li>
+           <li><a href="../Controller/accueilController.php">Accueil</a></li>
+           <li><a href="../Controller/facturesController.php" >Factures</a></li>
            <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
            <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
-           <li><a href="../Vue/contactVue.php">Contacts</a></li>
+           <li><a href="../Controller/contactController.php">Contacts</a></li>
            <li>Bonjour <?=$user?></li>
            <li><a href="../Controller/logoutController.php">Log out</a></li>
          </ul>
        </div>
     </nav>
     <ul class="sidenav" id="mobile-demo">
-      <li><a href="accueilController.php">Accueil</a></li>
-      <li><a href="#">Factures</a></li>
-      <li><a href="#">Sociétés</a></li>
+      <li><a href="../Controller/accueilController.php">Accueil</a></li>
+      <li><a href="../Controller/facturesController.php">Factures</a></li>
+      <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
+      <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
       <li><a href="../Vue/contactVue.php">Contacts</a></li>
-      <li><a href="#">Log in</a></li>
+      <li><a href="../Controller/logoutController.php">Log out</a></li>
     </ul>
     <!-- Fin navbar -->
