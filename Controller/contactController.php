@@ -4,5 +4,5 @@ if(empty($_SESSION['userType'])){
     header('location:loginController.php');
 };
 require '../Model/accueilModel.php';
-require '../Vue/clientsVue.php';
+require '../Vue/contactVue.php';
 ?>

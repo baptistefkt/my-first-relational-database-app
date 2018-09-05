@@ -42,8 +42,8 @@
   </div>
   <div class="container">
   <h3>5 derniers contacts</h3>
-  <a href="contactVue.php" class="waves-effect waves-light btn cyan darken-2">Voir tous les contacts<i class="material-icons right">visibility</i></a>
-  <a href="createContactVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client<i class="material-icons right">add</i></a>
+  <a href="../Controller/contactController.php" class="waves-effect waves-light btn cyan darken-2">Voir tous les contacts</a>
+  <a href="../Controller/createContactController.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
     <table>
       <thead>
         <tr>

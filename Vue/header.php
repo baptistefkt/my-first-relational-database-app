@@ -25,7 +25,12 @@ $user=$_SESSION['login'];
          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
          <ul id="nav-mobile" class="right hide-on-med-and-down">
            <li><a href="../Controller/accueilController.php">Accueil</a></li>
+<<<<<<< HEAD
            <li><a href="../Controller/facturesController.php" >Factures</a></li>
+=======
+           <!-- Dropdown Trigger -->
+           <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Factures<i class="material-icons right">arrow_drop_down</i></a></li>
+>>>>>>> 5f2c1520e9e21044e8aeb41ad241dda9df724652
            <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
            <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
            <li><a href="../Controller/contactController.php">Contacts</a></li>
@@ -36,10 +41,18 @@ $user=$_SESSION['login'];
     </nav>
     <ul class="sidenav" id="mobile-demo">
       <li><a href="../Controller/accueilController.php">Accueil</a></li>
+<<<<<<< HEAD
       <li><a href="../Controller/facturesController.php">Factures</a></li>
       <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
       <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
       <li><a href="../Vue/contactVue.php">Contacts</a></li>
       <li><a href="../Controller/logoutController.php">Log out</a></li>
+=======
+      <li><a href="#">Factures</a></li>
+      <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
+      <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
+      <li><a href="../Controller/contactController.php">Contacts</a></li>
+      <li><a href="#">Log in</a></li>
+>>>>>>> 5f2c1520e9e21044e8aeb41ad241dda9df724652
     </ul>
     <!-- Fin navbar -->
