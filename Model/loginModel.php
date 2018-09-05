@@ -28,7 +28,7 @@ function checkLogin($input,$DBData,$controlType){
         return $_SESSION;
         }
     else{
-        echo "error";
+        echo "login error or session expired";
         //var_dump($_SESSION);
 
     }
