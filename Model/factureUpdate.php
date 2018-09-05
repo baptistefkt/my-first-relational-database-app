@@ -1,7 +1,10 @@
 <?php
 require 'sql.php';
 $id=$_GET['id'];
+$facSoc=intval($_POST['factureSoc']);
+$facPers=intval($_POST['facturePers'])	;
 
+print_r($_POST);
 
 
 try {
@@ -14,11 +17,10 @@ try {
      $stmt->bindParam(':numero', $_POST['factureNum']);
      $stmt->bindParam(':date', $_POST['factureDate']);
      $stmt->bindParam(':objet', $_POST['factureObj']);
-     $stmt->bindParam(':fk_id_societe', $_POST['factureSoc']);
-     $stmt->bindParam(':fk_id_personne', $_POST['facturePers']);
+     $stmt->bindParam(':fk_id_societe', $facSoc);
+     $stmt->bindParam(':fk_id_personne', $facPers);
 	 $stmt->execute();
 	 // execute the query
-	 $stmt->execute();
      $stmt->closeCursor();
 
 	 // echo a message to say the UPDATE succeeded
