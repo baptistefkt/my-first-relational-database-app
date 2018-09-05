@@ -12,7 +12,7 @@ require 'sql.php';
  $stmt->bindParam(':fk_id_personne', $_POST['facturePers']);
  $stmt->execute();
  // echo "New records created successfully";
-
+ $stmt->closeCursor();
 
  header('Location: ../Vue/accueilVue.php');
 ?>

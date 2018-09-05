@@ -3,7 +3,7 @@ include 'header.php';
 require '../Model/createUpdateContactModel.php';
 ?>
 
-<body>
+<!-- <body> -->
 	<a href="/php-pdo/read.php">Liste des données</a>
 	<h1>Modifier</h1>
 	<form action="../Model/updateContactphp.php?id=<?php echo intval($id)?>" method="post">

@@ -11,8 +11,8 @@ function outFact(){
     echo '<td><a href="../Vue/detailFactureVue.php?id='. $f['id'] . '">'.$f[1].'</td>';
     echo '<td>'.$f[7].'</td>';
     echo '<td>'.$f[3].'</td>';
-    echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'Supprimer</a></td>';
-    echo '<td>'.'<a href="update.php?id='. $f['id'].'">'.'Modifier</a></td></tr>';
+    echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'<i class="material-icons right">delete</i></a></td>';
+    echo '<td>'.'<a href="../Vue/updateFactureVue.php?id='. $f['id'].'">'.'<i class="material-icons right">edit</i></a></td></tr>';
   }
 }
 $donneesFact->closeCursor();
