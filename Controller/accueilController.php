@@ -1,9 +1,8 @@
 <?php
-<<<<<<< HEAD
+
 session_start();
-var_dump($_SESSION);
-=======
->>>>>>> dev
+// var_dump($_SESSION);
+
  require '../Model/accueilModel.php';
  require '../Vue/accueilVue.php';
  ?>

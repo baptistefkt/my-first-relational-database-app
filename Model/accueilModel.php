@@ -14,9 +14,9 @@ function out1(){
     echo '<td>'.$s[5].'</td>';
 
     if ($s[7]== '1'){
-        echo '<td> Client </td>';
-    } else {
         echo '<td> Fournisseur </td>';
+    } else {
+        echo '<td> Client </td>';
     };
     echo '<td>'.'<a href="delete.php?id='. $s['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
     echo '<td>'.'<a href="updateClientVue.php?id='. $s['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
@@ -51,7 +51,7 @@ function out3(){
   foreach($donneesAffich3 as $f){
     echo '<tr><td>'.$f[2].'</td>';
     echo '<td>'.$f[1].'</td>';
-    echo '<td>'.$f[8].'</td>';
+    echo '<td>'.$f[7].'</td>';
     echo '<td>'.$f[3].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
     echo '<td>'.'<a href="update.php?id='. $f['id'].'">'.'<i class="far fa-edit"></i></a></td></tr>';
