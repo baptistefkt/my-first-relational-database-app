@@ -8,7 +8,7 @@ $resultat->execute();
 while ($donnees = $resultat->fetch())
 {
   $nom= $donnees['Nom'];
-  $prenom= $donnees['Prenom'];
+  $prenom= $donnees['Prénom'];
   $tel= $donnees['Telephone'];
   $mail= $donnees['Email'];
   $societe= $donnees['nom'];

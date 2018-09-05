@@ -4,7 +4,7 @@ require '../Model/sql.php';
 require '../Model/updateContactModel.php';
 ?>
 
-<body>
+<!-- <body> -->
 	<a href="/php-pdo/read.php">Liste des données</a>
 	<h1>Modifier</h1>
 	<form action="../Model/updatephp.php?id=<?php echo intval($id)?>" method="post">

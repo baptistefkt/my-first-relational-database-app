@@ -1,50 +1,53 @@
 <?php
+include 'header.php';
 require '../Model/fetchSocietes.php';
 require '../Model/fetchPersonnes.php';
  ?>
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Ajouter une facture</title>
-        <link rel="stylesheet" href="css/basics.css" media="screen" title="no title" charset="utf-8">
-    </head>
-    <body>
-        <h1>Ajout d'une facture</h1>
-        <form action="../Model/createFactureModel.php" method="post">
-            <div>
-                <label>Numéro de la facture :<input type="text" name="factureNum" value="" required></label>
+
+    <h1>Ajout d'une facture</h1>
+    <form action="../Model/createFactureModel.php" method="post">
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <input name="factureNum" id="factureNum" type="text" class="validate" required>
+                <label for="factureNum">Numéro de la facture :</label>
             </div>
-            <div>
-                <label>Date de la facture :<input type="date" name="factureDate" value="" required> </label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <input name="factureDate" id="factureDate" type="date" class="validate" required>
+                <label for="factureDate">Date de la facture :</label>
             </div>
-            <div>
-                <label>
-                    Société :
-                    <select name="factureSoc" required>
-                        <?php echo outSocietes(); ?>
-        				<option value="">Autre</option>
-        			</select>
-                </label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <select class="browser-default" name="facturePers" id="facturePers">
+                    <option value="" disabled selected>Choisissez un contact</option>
+                    <?php echo outPersonnes(); ?>
+    			</select>
+
             </div>
-            <div>
-                <label>
-                    Personne de contact :
-                    <select name="facturePers">
-                        <?php echo outPersonnes(); ?>
-        				<option value="">Autre</option>
-        			</select>
-                </label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+                <select class="browser-default" name="factureSoc">
+                    <option value="" disabled selected>Choisissez une société</option>
+                    <?php echo outSocietes(); ?>
+    			</select>
             </div>
-            <div>
-                <label>
-                    Objet de la facture :
-                    <textarea rows="8" cols="60" name="factureObj" value="" placeholder="Objet de la facture" required></textarea>
-                </label>
+        </div>
+        <div class="row">
+            <div class="input-field col s12 m8">
+              <textarea id="textarea1" class="materialize-textarea" required name="factureObj"></textarea>
+              <label for="textarea1">Objet de la facture: </label>
             </div>
-            <div>
-                <button type="submit" name="btnCreateFacture">Sauvegarder</button>
+        </div>
+        <div class="row">
+            <div class="col s12 m8">
+                <button class="btn waves-effect waves-light cyan darken-2" type="submit" name="btnCreateFacture">Sauvegarder<i class="material-icons right">add</i></button>
             </div>
-        </form>
-    </body>
-</html>
+
+        </div>
+    </form>
+<?php
+include 'footer.php';
+ ?>

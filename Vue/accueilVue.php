@@ -3,8 +3,8 @@ require '../Model/accueilModel.php';?>
 
   <div class="container">
   <h3>5 dernières factures</h3>
-  <a href="../Controller/facturesController.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures</a>
-  <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle facture</a>
+  <a href="../Controller/facturesController.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les factures<i class="material-icons right">visibility</i></a>
+  <a href="../Vue/createFactureVue.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle facture<i class="material-icons right">add</i></a>
     <table>
       <thead>
         <tr>
@@ -21,8 +21,8 @@ require '../Model/accueilModel.php';?>
   </div>
   <div class="container">
   <h3>5 dernières sociétés</h3>
-  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les sociétés</a>
-  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
+  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les sociétés<i class="material-icons right">visibility</i></a>
+  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Créer une nouvelle société<i class="material-icons right">add</i></a>
     <table>
       <thead>
         <tr>
@@ -41,8 +41,8 @@ require '../Model/accueilModel.php';?>
   </div>
   <div class="container">
   <h3>5 derniers contacts</h3>
-  <a href="contactVue.php" class="waves-effect waves-light btn cyan darken-2">Voir tous les contacts</a>
-  <a href="createContactVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
+  <a href="contactVue.php" class="waves-effect waves-light btn cyan darken-2">Voir tous les contacts<i class="material-icons right">visibility</i></a>
+  <a href="createContactVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client<i class="material-icons right">add</i></a>
     <table>
       <thead>
         <tr>
