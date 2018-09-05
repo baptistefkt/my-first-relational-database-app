@@ -39,7 +39,7 @@ $user=$_SESSION['login'];
       <li><a href="#">Factures</a></li>
       <li><a href="../Controller/societeController.php?type=Client">Clients</a></li>
       <li><a href="../Controller/societeController.php?type=Fournisseur">Fournisseurs</a></li>
-      <li><a href="../Vue/contactVue.php">Contacts</a></li>
+      <li><a href="../Controller/contactController.php">Contacts</a></li>
       <li><a href="../Controller/logoutController.php">Log out</a></li>
     </ul>
     <!-- Fin navbar -->

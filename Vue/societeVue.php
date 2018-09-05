@@ -4,8 +4,8 @@
   ?>
     <div class="container">
       <h3><?=$type?>s</h3>
-      <a class="waves-effect waves-light btn indigo accent-1" onclick="window.print();return false;">Imprimer</a>
-      <a href="createClientVue.php" class="waves-effect waves-light btn indigo accent-1">Créer un nouveau <?=$type?></a>
+      <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer</a>
+      <a href="createClientVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau <?=$type?></a>
       <table>
         <thead>
           <tr>
