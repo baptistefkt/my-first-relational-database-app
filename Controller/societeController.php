@@ -3,6 +3,7 @@ session_start();
 if(empty($_SESSION['userType'])){
     header('location:loginController.php');
 };
-    require '../Model/facturesModel.php';
-    require '../Vue/facturesVue.php';
- ?>
+require '../Model/societeModel.php';
+require '../Vue/societeVue.php';
+
+?>

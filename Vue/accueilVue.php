@@ -1,5 +1,5 @@
 <?php include 'header.php';
-require '../Model/accueilModel.php';?>
+?>
 
   <div class="container">
   <h3>5 dernières factures</h3>
@@ -21,8 +21,9 @@ require '../Model/accueilModel.php';?>
   </div>
   <div class="container">
   <h3>5 dernières sociétés</h3>
-  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Voir toutes les sociétés</a>
-  <a href="create.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau client</a>
+  <a href="../Controller/societeController.php?type=Fournisseur" class="waves-effect waves-light btn cyan darken-2">Voir les fournisseurs</a>
+  <a href="../Controller/societeController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Voir les clients</a>
+  <a href="../Controller/createSocieteController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Ajouter une société</a>
     <table>
       <thead>
         <tr>

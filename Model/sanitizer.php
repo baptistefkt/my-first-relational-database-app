@@ -16,4 +16,12 @@ function sanitize($value,$type){
     }
 }
 
+function checkEmptyPost($postValue,$filterType){
+    if (isset($postValue) && !empty($postValue)){
+        $var=sanitize($postValue,$filterType);
+         
+    }
+    return $var;    
+}
+
 ?>

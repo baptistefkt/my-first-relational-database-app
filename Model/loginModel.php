@@ -11,6 +11,7 @@ $userName=sanitize($_POST['username'],'string');
 $userPWD=sanitize($_POST['password'],'string');
 $userInput=array (0=>$userName, 1=>$userPWD);
 
+
 $loginTypeRaw=$bdd->prepare('SELECT * FROM utilisateurs where username=:username');
 $loginTypeRaw->bindParam(':username',$userName);
 $loginTypeRaw->execute();
@@ -28,6 +29,8 @@ function checkLogin($input,$DBData,$controlType){
         }
     else{
         echo "error";
+        //var_dump($_SESSION);
+
     }
 }
 

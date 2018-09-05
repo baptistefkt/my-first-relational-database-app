@@ -1,9 +1,7 @@
 <?php
 require 'sql.php';
-require 'sanitizer.php';
-
-$id= sanitize($_GET['id'],'integer');
-$resultat = $bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe  WHERE id_personnes=:id');
+$id= $_GET['id'];
+$resultat = $bdd->prepare('SELECT * FROM Personnes as p LEFT JOIN societes as s on p.societe_id=s.id_societe  WHERE id=:id');
 $resultat->bindParam(':id',$id);
 $resultat->execute();
 while ($donnees = $resultat->fetch())
@@ -15,9 +13,8 @@ while ($donnees = $resultat->fetch())
   $societe= $donnees['nom'];
 }
 $resultat->closeCursor();
-?>
 
-<?php
+// pre-fill
 $donneesbis=$bdd->prepare('SELECT * FROM societes as s');
 $donneesbis->execute();
 $donneesAffichbis=$donneesbis->fetchAll();

@@ -25,6 +25,5 @@ Noms d'utilisateurs et Mot de passe
 ranu -> pwd: jean-michel [admin]
 mumu->pwd:odil [mod]
 
-![kanban](/assets/images/kanban.png)
-![siteweb](/assets/images/siteinter.png)
-![zoom site](/assets/images/zoomsite.png)
+![kanban](/assets/images/kanbancogip.png)
+![siteweb](/assets/images/cogipaccueil.png)

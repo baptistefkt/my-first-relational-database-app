@@ -1,6 +1,6 @@
 
   <?php require 'header.php';
-  require '../Model/ContactModel.php'; ?>
+  require '../Model/contactModel.php'; ?>
     <div class="container">
       <h3>Historique des contacts</h3>
       <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer</a>
