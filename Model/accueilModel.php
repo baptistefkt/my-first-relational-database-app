@@ -50,7 +50,7 @@ function out3(){
   global $donneesAffich3;
   foreach($donneesAffich3 as $f){
     echo '<tr><td>'.$f[2].'</td>';
-    echo '<td>'.$f[1].'</td>';
+    echo '<td><a href="../Vue/detailFactureVue.php?id='. $f['id'] . '">'.$f[1].'</td>';
     echo '<td>'.$f[7].'</td>';
     echo '<td>'.$f[3].'</td>';
     echo '<td>'.'<a href="delete.php?id='. $f['id'].'">'.'<i class="far fa-trash-alt"></i></a></td>';
