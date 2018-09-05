@@ -6,6 +6,7 @@ $donnees->execute();
 $donneesAffich=$donnees->fetchAll();
 function out1(){
   global $donneesAffich;
+  $table='societes';
   foreach($donneesAffich as $s){
     echo '<tr><td>'.$s[1].'</td>';
     echo '<td>'.$s[2].'</td>';
@@ -18,7 +19,7 @@ function out1(){
     } else {
         echo '<td> Client </td>';
     };
-    echo '<td><a href="delete.php?id='. $s['id'].'"><i class="far fa-trash-alt"></i></a></td>';
+    echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
     echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
   }
 }

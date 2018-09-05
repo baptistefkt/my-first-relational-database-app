@@ -52,10 +52,10 @@ $updateSoc->bindParam(':socId',$socId);
 $updateSoc->execute();
 
 if (!empty($socNom) && !empty($socAdresse) &&!empty($socPays) &&!empty($socTel)&& !empty($socType)){
-    if($socType==1){
+    if($oldType==1){
     header('Location: ../Controller/societeController.php?type=Fournisseur');    
     }
-    else if($socType==2){
+    else if($oldType==2){
     header('Location: ../Controller/societeController.php?type=Client');    
     }
     else{

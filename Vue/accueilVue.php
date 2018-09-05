@@ -23,6 +23,7 @@
   <h3>5 dernières sociétés</h3>
   <a href="../Controller/societeController.php?type=Fournisseur" class="waves-effect waves-light btn cyan darken-2">Voir les fournisseurs</a>
   <a href="../Controller/societeController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Voir les clients</a>
+  <a href="../Controller/createSocieteController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Ajouter une société</a>
     <table>
       <thead>
         <tr>
