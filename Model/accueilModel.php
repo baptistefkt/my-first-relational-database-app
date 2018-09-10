@@ -40,8 +40,8 @@ function out2(){
     echo '<td>'.$p[4].'</td>';
     echo '<td>'.$p[7].'</td>';
     if($_SESSION['userType']=='admin'){
-      echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
-      echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+      echo '<td><a href="../Model/deleteContact.php?id='. $p['id_personnes'].'"><i class="far fa-trash-alt"></i></a></td>';
+      echo '<td>'.'<a href="updateContactController.php?id='. $p['id_personnes'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
     }
   }
 }
@@ -59,8 +59,8 @@ function out3(){
     echo '<td>'.$f[7].'</td>';
     echo '<td>'.$f[3].'</td>';
     if($_SESSION['userType']=='admin'){
-      echo '<td><a href="../Model/deleteSoc.php?id='. $s['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
-      echo '<td>'.'<a href="updateSocieteController.php?id='. $s['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
+      echo '<td><a href="../Model/deleteSoc.php?id='. $f['id_societe'].'&table='.$table.'"><i class="far fa-trash-alt"></i></a></td>';
+      echo '<td>'.'<a href="updateSocieteController.php?id='. $f['id_societe'].'&type='.$s[7].'">'.'<i class="far fa-edit"></i></a></td></tr>';
     }
   }
 }
