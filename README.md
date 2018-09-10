@@ -1,6 +1,10 @@
 Projet base de donnée relationnelle en php et sql.
 ==================================
+<<<<<<< HEAD
 Projet soumis Ã  un trinome provenant d'une formation _becode_.
+=======
+Projet soumis à un trinome provenant d'une formation _becode_.
+>>>>>>> dev
 <br/>**Développeurs juniors**:
 <br/>Formation Lovelace 2 : **_Morgane Meganck_**.
 <br/>Formation Lovelace 2 : **_Son Quang_**.

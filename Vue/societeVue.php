@@ -1,11 +1,11 @@
-  <?php 
+  <?php
   require 'header.php';
   require '../Model/_displaySoc.php';
   ?>
     <div class="container">
       <h3><?=$type?>s</h3>
-      <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer</a>
-      <a href="createClientVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau <?=$type?></a>
+      <a class="waves-effect waves-light btn cyan darken-2" onclick="window.print();return false;">Imprimer<i class="material-icons right">print</i></a>
+      <a href="createClientVue.php" class="waves-effect waves-light btn cyan darken-2">Créer un nouveau <?=$type?><i class="material-icons right">add</i></a>
       <table>
         <thead>
           <tr>

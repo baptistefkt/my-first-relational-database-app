@@ -21,9 +21,9 @@
   </div>
   <div class="container">
   <h3>5 dernières sociétés</h3>
-  <a href="../Controller/societeController.php?type=Fournisseur" class="waves-effect waves-light btn cyan darken-2">Voir les fournisseurs</a>
-  <a href="../Controller/societeController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Voir les clients</a>
-  <a href="../Controller/createSocieteController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Ajouter une société</a>
+  <a href="../Controller/societeController.php?type=Fournisseur" class="waves-effect waves-light btn cyan darken-2">Voir les fournisseurs<i class="material-icons right">visibility</i></a>
+  <a href="../Controller/societeController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Voir les clients<i class="material-icons right">visibility</i></a>
+  <a href="../Controller/createSocieteController.php?type=Client" class="waves-effect waves-light btn cyan darken-2">Ajouter une société<i class="material-icons right">add</i></a>
     <table>
       <thead>
         <tr>
