@@ -27,3 +27,6 @@ mumu->pwd:odil [mod]
 
 ![kanban](/assets/images/kanbancogip.png)
 ![siteweb](/assets/images/cogipaccueil.png)
+
+
+Mise à jour 09/09/2018
